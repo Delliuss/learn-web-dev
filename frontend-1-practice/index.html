@@ -1,26 +1,158 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Выбор даты и времени</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <!--
-      ЗАДАНИЕ
-      ========
-      Сверстать страницу выбора даты и времени по своему макету.
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Планирование визита — Барбершоп Топор</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="page">
 
-      Пока это только вёрстка. Никакого JavaScript — ни кликов,
-      ни переходов, ни выбора дня. Всё статично.
+    <header class="header">
+      <a class="header__logo" href="#">ТОПОР</a>
+      <nav class="header__nav">
+        <ul class="nav">
+          <li class="nav__item"><a class="nav__link" href="#">Услуги</a></li>
+          <li class="nav__item"><a class="nav__link" href="#">Галерея</a></li>
+          <li class="nav__item"><a class="nav__link" href="#">Команда</a></li>
+          <li class="nav__item"><a class="nav__link" href="#">Отзывы</a></li>
+          <li class="nav__item"><a class="nav__link" href="#">Контакты</a></li>
+        </ul>
+      </nav>
+    </header>
 
-      Стили пишите в styles.css. Разметку — здесь.
-    -->
+    <main class="main">
 
-    <div class="page">
-      <!-- Начните отсюда. Разметьте шапку, основную область
-           с календарём и слотами, подвал. -->
-    </div>
-  </body>
+      <section class="steps">
+        <div class="steps__item steps__item_done">
+          <span class="steps__num">1</span>
+          <span class="steps__line"></span>
+        </div>
+        <div class="steps__item steps__item_done">
+          <span class="steps__num">2</span>
+          <span class="steps__line"></span>
+        </div>
+        <div class="steps__item steps__item_active">
+          <span class="steps__num">3</span>
+          <span class="steps__line"></span>
+        </div>
+        <div class="steps__item">
+          <span class="steps__num">4</span>
+          <span class="steps__line"></span>
+        </div>
+        <div class="steps__item">
+          <span class="steps__num">5</span>
+        </div>
+      </section>
+
+      <h1 class="main__title">ПЛАНИРОВАНИЕ ВИЗИТА</h1>
+
+      <div class="booking">
+
+        <section class="calendar">
+          <div class="calendar__head">
+            <h2 class="calendar__title">Май 2026</h2>
+            <div class="calendar__arrows">
+              <button class="calendar__arrow" type="button" aria-label="Предыдущий месяц">‹</button>
+              <button class="calendar__arrow" type="button" aria-label="Следующий месяц">›</button>
+            </div>
+          </div>
+
+          <div class="calendar__grid">
+            <span class="calendar__day-name">Пн</span>
+            <span class="calendar__day-name">Вт</span>
+            <span class="calendar__day-name">Ср</span>
+            <span class="calendar__day-name">Чт</span>
+            <span class="calendar__day-name">Пт</span>
+            <span class="calendar__day-name">Сб</span>
+            <span class="calendar__day-name">Вс</span>
+
+            <span class="calendar__day calendar__day_muted">26</span>
+            <span class="calendar__day calendar__day_muted">27</span>
+            <span class="calendar__day calendar__day_muted">28</span>
+            <span class="calendar__day calendar__day_muted">29</span>
+            <span class="calendar__day calendar__day_muted">30</span>
+            <span class="calendar__day calendar__day_muted">31</span>
+            <span class="calendar__day">1</span>
+
+            <span class="calendar__day">2</span>
+            <span class="calendar__day">3</span>
+            <span class="calendar__day">4</span>
+            <span class="calendar__day">5</span>
+            <span class="calendar__day">6</span>
+            <span class="calendar__day">7</span>
+            <span class="calendar__day">8</span>
+
+            <span class="calendar__day">9</span>
+            <span class="calendar__day">10</span>
+            <span class="calendar__day">11</span>
+            <span class="calendar__day">12</span>
+            <span class="calendar__day">13</span>
+            <span class="calendar__day">14</span>
+            <span class="calendar__day">15</span>
+
+            <span class="calendar__day">16</span>
+            <span class="calendar__day">17</span>
+            <span class="calendar__day">18</span>
+            <span class="calendar__day">19</span>
+            <span class="calendar__day">20</span>
+            <span class="calendar__day">21</span>
+            <span class="calendar__day">22</span>
+          </div>
+        </section>
+
+        <section class="slots">
+          <h2 class="slots__title">Доступное время</h2>
+          <div class="slots__grid">
+            <button class="slot" type="button">10:00</button>
+            <button class="slot slot_busy" type="button" disabled>11:00<br><span class="slot__note">Занято</span></button>
+            <button class="slot" type="button">12:00</button>
+            <button class="slot slot_busy" type="button" disabled>13:00<br><span class="slot__note">Занято</span></button>
+            <button class="slot" type="button">14:00</button>
+            <button class="slot" type="button">15:00</button>
+            <button class="slot" type="button">16:00</button>
+            <button class="slot" type="button">17:00</button>
+          </div>
+        </section>
+
+      </div>
+
+      <div class="bottom-bar">
+        <p class="bottom-bar__label">Выбранный слот:</p>
+        <p class="bottom-bar__value">
+          <span class="bottom-bar__icon"></span>
+          <strong>9 мая</strong>
+        </p>
+        <button class="button button_primary" type="button">Продолжить</button>
+      </div>
+
+    </main>
+
+    <footer class="footer">
+      <div class="footer__brand">
+        <p class="footer__tagline">Джентльмены предпочитают</p>
+        <p class="footer__logo">ТОПОР</p>
+      </div>
+
+      <div class="footer__block">
+        <h3 class="footer__heading">Контакты</h3>
+        <p class="footer__line">📍 ул. Садовая, 15, Москва</p>
+        <p class="footer__line">📞 +7 (495) 123-45-67</p>
+      </div>
+
+      <div class="footer__block">
+        <h3 class="footer__heading">Режим работы</h3>
+        <p class="footer__line">Пн–Пт: 9:00 – 21:00</p>
+        <p class="footer__line">Сб–Вс: 10:00 – 19:00</p>
+      </div>
+
+      <div class="footer__bottom">
+        <p class="footer__copyright">© 2026. Все права защищены.</p>
+        <a class="footer__link" href="#">Политика конфиденциальности</a>
+      </div>
+    </footer>
+
+  </div>
+</body>
 </html>
