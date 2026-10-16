@@ -14,6 +14,7 @@ body {
 a {
   text-decoration: none;
   color: inherit;
+  cursor: pointer;
 }
 
 ul {
@@ -100,8 +101,8 @@ button {
   width: 32px;
   height: 32px;
   border-radius: 50%;
-  background-color: #D1D5DB;
-  color: #FFFFFF;
+  background-color: #DBDBDB;
+  color: #6B7280;
   font-weight: bold;
   font-size: 14px;
   flex-shrink: 0;
@@ -109,7 +110,7 @@ button {
 
 .steps__item_done .steps__num {
   background-color: #C9A227;
-  color: #1A1A1A;
+  color: #FFFFFF;
 }
 
 .steps__item_active .steps__num {
@@ -120,7 +121,7 @@ button {
 .steps__line {
   flex: 1;
   height: 3px;
-  background-color: #D1D5DB;
+  background-color: #DBDBDB;
   margin: 0 8px;
   border-radius: 2px;
 }
@@ -196,9 +197,8 @@ button {
 }
 
 .calendar__arrow:hover {
-  background-color: #F2F3F5;
+  background-color: #E5DEBC;
 }
-
 
 .calendar__grid {
   display: grid;
@@ -220,7 +220,9 @@ button {
   justify-content: center;
   height: 44px;
   border-radius: 8px;
-  border: 1px solid #E5E7EB;
+  border: 1px solid #DBDBDB;
+  background-color: #FFFFFF;
+  font-family: inherit;
   font-size: 15px;
   color: #1A1A1A;
   cursor: pointer;
@@ -229,23 +231,35 @@ button {
 
 .calendar__day:hover {
   background-color: #E5DEBC;
-  border-color: #1B2A4A;
+  border-color: #C9A227;
 }
 
 .calendar__day:active {
   background-color: #C9A227;
-  border-color: #1B2A4A;
+  border-color: #C9A227;
+  color: #FFFFFF;
 }
 
 .calendar__day_muted {
-  color: #B0B0B0;
+  color: #DBDBDB;
+  cursor: default;
+}
+
+.calendar__day_muted:hover {
+  background-color: #FFFFFF;
+  border-color: #DBDBDB;
 }
 
 .calendar__day_selected {
   background-color: #C9A227;
   border-color: #C9A227;
+  color: #FFFFFF;
   font-weight: bold;
-  color: #1A1A1A;
+}
+
+.calendar__day_selected:hover {
+  background-color: #B08F1F;
+  border-color: #B08F1F;
 }
 
 /* ---------- Слоты ---------- */
@@ -266,7 +280,7 @@ button {
 .slot {
   padding: 14px 12px;
   border-radius: 8px;
-  border: 1px solid #E5E7EB;
+  border: 1px solid #DBDBDB;
   background-color: #FFFFFF;
   font-size: 15px;
   color: #1A1A1A;
@@ -276,30 +290,31 @@ button {
 }
 
 .slot:hover {
-  border-color: #1B2A4A;
+  border-color: #C9A227;
   background-color: #E5DEBC;
 }
 
 .slot:active {
-  border-color: #1B2A4A;
+  border-color: #C9A227;
   background-color: #C9A227;
+  color: #FFFFFF;
 }
 
 .slot_busy {
   background-color: #F2F3F5;
-  border-color: #F2F3F5;
-  color: #B0B0B0;
+  border-color: #DBDBDB;
+  color: #6B7280;
   cursor: not-allowed;
 }
 
 .slot_busy:hover {
   background-color: #F2F3F5;
-  border-color: #F2F3F5;
+  border-color: #DBDBDB;
 }
 
 .slot__note {
   font-size: 12px;
-  color: #B0B0B0;
+  color: #6B7280;
 }
 
 /* ---------- Нижняя панель ---------- */
@@ -308,27 +323,22 @@ button {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px 32px;
-  background-color: transparent;
+  padding: 20px 0;
   gap: 24px;
 }
 
-.bottom-bar__label {
+.bottom-bar__info {
+  display: flex;
+  gap: 32px;
+}
+
+.bottom-bar__line {
   font-size: 15px;
   color: #1A1A1A;
 }
 
-.bottom-bar__value {
-  font-size: 18px;
-  color: #1A1A1A;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  margin-right: auto;
-}
-
-.bottom-bar__icon {
-  font-size: 18px;
+.bottom-bar__line strong {
+  color: #1B2A4A;
 }
 
 /* ---------- Кнопка Продолжить ---------- */
@@ -350,11 +360,13 @@ button {
 
 .button_primary:hover {
   background-color: #E5DEBC;
-  color: #1B2A4A;
+  border-color: #C9A227;
+  color: #1A1A1A;
 }
 
 .button_primary:active {
   background-color: #C9A227;
+  border-color: #C9A227;
   color: #FFFFFF;
 }
 
@@ -367,7 +379,6 @@ button {
   padding: 40px 80px 24px;
   background-color: #1B2A4A;
   color: #FFFFFF;
-  position: relative;
 }
 
 .footer__brand {
@@ -427,4 +438,101 @@ button {
 
 .footer__link:hover {
   color: #C9A227;
+}
+
+/* ---------- Адаптив ---------- */
+
+@media (max-width: 1024px) {
+  .header {
+    padding: 20px 32px;
+  }
+
+  .main {
+    padding: 24px 32px 32px;
+  }
+
+  .footer {
+    padding: 32px 32px 20px;
+  }
+
+  .booking {
+    flex-direction: column;
+  }
+
+  .slots {
+    width: 100%;
+  }
+}
+
+@media (max-width: 640px) {
+  .header {
+    flex-direction: column;
+    gap: 16px;
+    padding: 16px 20px;
+  }
+
+  .nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+  }
+
+  .main {
+    padding: 20px 16px 24px;
+  }
+
+  .steps {
+    padding: 16px;
+    overflow-x: auto;
+  }
+
+  .main__title {
+    font-size: 22px;
+  }
+
+  .calendar,
+  .slots {
+    padding: 16px;
+  }
+
+  .calendar__day {
+    height: 38px;
+    font-size: 13px;
+  }
+
+  .calendar__day-name {
+    font-size: 12px;
+  }
+
+  .slots__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .bottom-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 16px 0;
+  }
+
+  .bottom-bar__info {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .button {
+    width: 100%;
+  }
+
+  .footer {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 24px 16px 16px;
+  }
+
+  .footer__bottom {
+    flex-direction: column;
+    gap: 8px;
+    align-items: flex-start;
+  }
 }
