@@ -1,14 +1,109 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Выбор даты и времени</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <div class="page">
-      <!-- Перенесите вашу верстку. Удалите статичные данные. Подключите скрипт -->
-    </div>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Планирование визита — Барбершоп Топор</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="page">
+
+    <header class="header">
+      <a class="header__logo" href="#">ТОПОР</a>
+      <nav class="header__nav">
+        <ul class="nav">
+          <li class="nav__item"><a class="nav__link" href="#">Услуги</a></li>
+          <li class="nav__item"><a class="nav__link" href="#">Галерея</a></li>
+          <li class="nav__item"><a class="nav__link" href="#">Команда</a></li>
+          <li class="nav__item"><a class="nav__link" href="#">Отзывы</a></li>
+          <li class="nav__item"><a class="nav__link" href="#">Контакты</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="main">
+
+      <section class="steps">
+        <div class="steps__item steps__item_done">
+          <span class="steps__num">1</span>
+          <span class="steps__line"></span>
+        </div>
+        <div class="steps__item steps__item_done">
+          <span class="steps__num">2</span>
+          <span class="steps__line"></span>
+        </div>
+        <div class="steps__item steps__item_active">
+          <span class="steps__num">3</span>
+          <span class="steps__line"></span>
+        </div>
+        <div class="steps__item">
+          <span class="steps__num">4</span>
+          <span class="steps__line"></span>
+        </div>
+        <div class="steps__item">
+          <span class="steps__num">5</span>
+        </div>
+      </section>
+
+      <h1 class="main__title">ПЛАНИРОВАНИЕ ВИЗИТА</h1>
+
+      <div class="booking">
+
+        <section class="calendar">
+          <div class="calendar__head">
+            <h2 class="calendar__title" id="calendarTitle">Октябрь 2026</h2>
+            <div class="calendar__arrows">
+              <button class="calendar__arrow" type="button" id="prevMonth" aria-label="Предыдущий месяц">‹</button>
+              <button class="calendar__arrow" type="button" id="nextMonth" aria-label="Следующий месяц">›</button>
+            </div>
+          </div>
+
+          <div class="calendar__grid" id="calendarGrid"></div>
+        </section>
+
+        <section class="slots">
+          <h2 class="slots__title" id="slotsTitle">Доступное время</h2>
+          <div class="slots__grid" id="slotsGrid"></div>
+        </section>
+
+      </div>
+
+      <div class="bottom-bar">
+        <div class="bottom-bar__info">
+          <p class="bottom-bar__line" id="bottomBar">Выберите дату и время</p>
+        </div>
+        <button class="button button_primary" type="button" id="continueBtn">Продолжить</button>
+      </div>
+
+    </main>
+
+    <footer class="footer">
+      <div class="footer__brand">
+        <p class="footer__tagline">Джентльмены предпочитают</p>
+        <p class="footer__logo">ТОПОР</p>
+      </div>
+
+      <div class="footer__block">
+        <h3 class="footer__heading">Контакты</h3>
+        <p class="footer__line">📍 ул. Садовая, 15, Москва</p>
+        <p class="footer__line">📞 +7 (495) 123-45-67</p>
+      </div>
+
+      <div class="footer__block">
+        <h3 class="footer__heading">Режим работы</h3>
+        <p class="footer__line">Пн–Пт: 9:00 – 21:00</p>
+        <p class="footer__line">Сб–Вс: 10:00 – 19:00</p>
+      </div>
+
+      <div class="footer__bottom">
+        <p class="footer__copyright">© 2026. Все права защищены.</p>
+        <a class="footer__link" href="#">Политика конфиденциальности</a>
+      </div>
+    </footer>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
 </html>
